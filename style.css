@@ -11,8 +11,8 @@ html {
   width: 100%;
   overflow: hidden;
 }
-img {
-  filter: drop-shadow(0 0 0.3rem rgb(56, 55, 55)) !important;
+img{
+  filter: drop-shadow(0 0 0.1rem rgb(56, 55, 55)) !important;
 }
 
 body {
@@ -44,11 +44,11 @@ body {
 
 .content__details img {
   position: relative;
-  text-align: center;
   margin-top: 1rem;
   height: 400px;
-  filter: drop-shadow(0 0 0.3rem rgb(56, 55, 55)) !important;
+  filter: drop-shadow(0 0 0.2rem rgb(56, 55, 55)) !important;
 }
+
 
 .logo img {
   position: absolute;
