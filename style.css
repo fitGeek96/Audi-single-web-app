@@ -11,7 +11,7 @@ html {
 }
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-color: black;
+  background-color: #acb5b3;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -25,9 +25,9 @@ body {
   text-align: center;
 }
 .content {
-    position: relative;
-    text-align: center;
-    padding-top: 10rem;
+  position: relative;
+  text-align: center;
+  padding-top: 10rem;
 }
 .content__title h1 {
   text-align: center;
@@ -37,8 +37,7 @@ body {
   text-align: center;
   margin-top: 1rem;
   height: 400px;
-  filter: drop-shadow(0 0 0.3rem rgb(0, 0, 0));
-
+  filter: drop-shadow(0 0 0.3rem rgb(56, 55, 55));
 }
 
 .logo img {
@@ -130,13 +129,26 @@ body {
   transform: rotate(-45deg);
 }
 .dots {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: center;
 }
 .dot {
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    background-color: seashell;
-    filter: drop-shadow(0 0 0.3rem rgb(209, 162, 175));
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background-color: seashell;
+  filter: drop-shadow(0 0 0.3rem rgb(51, 50, 50));
+  margin: 0.5rem;
+}
+.dot {
+  cursor: pointer;
+}
+.white {
+  background-color: #fff;
+}
+.red {
+  background-color: darkred;
+}
+.grey {
+  background-color: dimgray;
 }
