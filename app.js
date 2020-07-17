@@ -1,6 +1,8 @@
 //jshint esversion:6
 const contentDetailEl = document.querySelector(".content__details");
 const dotsColorEl = document.querySelector(".dots");
+const hamburgerMenuEl = document.querySelector(".hamburger");
+const navEl = document.querySelector(".nav");
 
 
 
@@ -29,4 +31,17 @@ function changeCarColor() {
     });
 }
 
+function openMenu() {
+    hamburgerMenuEl.addEventListener("click", function () {
+        navEl.classList.toggle("open");
+        navEl.classList.toggle("close");
+        hamburgerMenuEl.classList.toggle("shift__hamburger__menu");
+        hamburgerMenuEl.firstElementChild.classList.toggle("change");
+        hamburgerMenuEl.firstElementChild.nextElementSibling.classList.toggle("change");
+        hamburgerMenuEl.lastElementChild.classList.toggle("change");
+
+    });
+}
+
 changeCarColor();
+openMenu();

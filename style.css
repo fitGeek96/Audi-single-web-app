@@ -8,6 +8,8 @@
 
 html {
   height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 body {
@@ -54,10 +56,16 @@ body {
 
 .nav {
   position: absolute;
-  right: 0;
-  transition: 0.4s all ease;
   height: 100vh !important;
-  display: none;
+  transition: 0.4s all ease;
+}
+
+.close {
+  right: -360px;
+}
+
+.open {
+  right: 0;
 }
 
 .menu {
@@ -106,6 +114,7 @@ body {
 }
 
 .hamburger {
+  transition: 0.4s all ease;
   position: absolute;
   top: 50px;
   right: 1rem;
@@ -123,6 +132,12 @@ body {
   background: #aa0e0e;
   border-radius: 2px;
   top: 10px;
+  transition: 0.4s all ease;
+
+}
+
+.shift__hamburger__menu {
+  right: 20rem;
 }
 
 .hamburger span:hover {
@@ -132,14 +147,17 @@ body {
 .change.first__bar {
   top: 1.9rem;
   transform: rotate(45deg);
+  transition: 0.4s all ease;
 }
 
 .change.second__bar {
   opacity: 0;
+  transition: 0.4s all ease;
 }
 
 .change.third__bar {
   transform: rotate(-45deg);
+  transition: 0.4s all ease;
 }
 
 .dots {
@@ -179,36 +197,9 @@ body {
   -webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
   animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
-.slide-in-right {
-	-webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
 
 
- @-webkit-keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(1000px);
-            transform: translateX(1000px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1;
-  }
-}
+
 
 
 @-webkit-keyframes slide-in-blurred-left {
