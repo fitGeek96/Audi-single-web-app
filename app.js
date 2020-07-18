@@ -4,12 +4,20 @@ const contentDetailEl = document.querySelector(".content__details");
 const dotsColorEl = document.querySelector(".dots");
 const hamburgerMenuEl = document.querySelector(".hamburger");
 const navEl = document.querySelector(".nav");
+
 const homeBtnEl = document.querySelector(".menu__items").firstElementChild;
 const wheelsBtnEl = homeBtnEl.nextElementSibling;
 const monitorsBtnEl = wheelsBtnEl.nextElementSibling;
 const categoriesBtnEl = monitorsBtnEl.nextElementSibling;
 
-console.log(categoriesBtnEl);
+const modalEl_1 = document.querySelector(".modal_1");
+const modalEl_2 = document.querySelector(".modal_2");
+const modalEl_3 = document.querySelector(".modal_3");
+const modalEl_4 = document.querySelector(".modal_4");
+const modalEl_5 = document.querySelector(".modal_5");
+const modalEl_6 = document.querySelector(".modal_6");
+
+const closeModalTriggerEl = document.querySelectorAll(".close__modal");
 
 
 
@@ -75,20 +83,77 @@ function wheels(){
       </div>
       <div class="content__details wheel__container">
         <div class="wheels">
-          <img src="images/wheel__4.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-1">
-          <img src="images/wheel__2.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-2">
-          <img src="images/wheel__3.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-3">
+          <img src="images/wheel__4.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-1 w1">
+          <img src="images/wheel__2.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-2 w2">
+          <img src="images/wheel__3.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-3 w3">
         </div>
         <div class="wheels">
-          <img src="images/wheel__1.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-4">
-          <img src="images/wheel__5.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-5">
-          <img src="images/wheel__6.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-6">
+          <img src="images/wheel__1.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-4 w4">
+          <img src="images/wheel__5.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-5 w5">
+          <img src="images/wheel__6.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-6 w6">
         </div>
       </div>`;
     });
 }
 
+const wheelsInfo = () => {
+    window.addEventListener("click", function (event) {
+      if (event.target.classList.contains("w1")) {
+          console.log(event.target);
+        modalEl_1.classList.add("open__modal");
+      } else if (event.target.classList.contains("w2")) {
+        modalEl_2.classList.add("open__modal");
+      } else if (event.target.classList.contains("w3")) {
+        modalEl_3.classList.add("open__modal");
+      } else if (event.target.classList.contains("w4")) {
+        modalEl_4.classList.add("open__modal");
+      } else if (event.target.classList.contains("w5")) {
+        modalEl_5.classList.add("open__modal");
+      } else if (event.target.classList.contains("w6")) {
+        modalEl_6.classList.add("open__modal");
+      }
+  
+      closeModalTriggerEl[0].addEventListener("click", function (event) {
+        modalEl_1.classList.remove("open__modal");
+      });
+      closeModalTriggerEl[1].addEventListener("click", function (event) {
+        modalEl_2.classList.remove("open__modal");
+      });
+      closeModalTriggerEl[2].addEventListener("click", function (event) {
+        modalEl_3.classList.remove("open__modal");
+      });
+      closeModalTriggerEl[3].addEventListener("click", function (event) {
+        modalEl_4.classList.remove("open__modal");
+      });
+      closeModalTriggerEl[4].addEventListener("click", function (event) {
+        modalEl_5.classList.remove("open__modal");
+      });
+      closeModalTriggerEl[5].addEventListener("click", function (event) {
+        modalEl_6.classList.remove("open__modal");
+      });
+  
+      window.addEventListener("click", function (event) {
+          console.log(event.target);
+        if (event.target === modalEl_1) {
+          modalEl_1.classList.remove("open__modal");
+        } else if (event.target === modalEl_2) {
+          modalEl_2.classList.remove("open__modal");
+        } else if (event.target === modalEl_3) {
+          modalEl_3.classList.remove("open__modal");
+        } else if (event.target === modalEl_4) {
+          modalEl_4.classList.remove("open__modal");
+        } else if (event.target === modalEl_5) {
+          modalEl_5.classList.remove("open__modal");
+        } else if (event.target === modalEl_6) {
+          modalEl_6.classList.remove("open__modal");
+        }
+      });
+    });
+  };
+  
+
 changeCarColor();
 openMenu();
 home();
 wheels();
+wheelsInfo();

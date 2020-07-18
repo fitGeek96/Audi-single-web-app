@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 * {
   margin: 0;
@@ -73,6 +74,7 @@ body {
   right: 0;
 }
 
+/* side bar menu */
 .menu {
   transition: 0.4s all ease;
   width: 360px;
@@ -115,6 +117,7 @@ body {
   color: red;
 }
 
+/* hamburger button */
 .hamburger {
   transition: 0.4s all ease;
   position: absolute;
@@ -165,6 +168,7 @@ body {
   transition: 0.4s all ease;
 }
 
+/* colors dots */
 .dots {
   display: flex;
   justify-content: center;
@@ -195,6 +199,8 @@ body {
   background-color: dimgray;
 }
 
+/* WHEELS SECTION */
+
 .wheel__container img {
   transition: 0.4s all ease;
   width: 200px;
@@ -218,6 +224,105 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
+
+/* Modal */
+
+/*** modal styles ***/
+.modal_1,
+.modal_2,
+.modal_3,
+.modal_4,
+.modal_5,
+.modal_6 {
+  display: none;
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 0px;
+  color: #000;
+}
+
+.modal__content {
+  background: #f0f3f6;
+  width: 80%;
+  max-width: 640px;
+  margin: 2rem auto;
+  border-radius: 4px;
+  padding: 2rem 2rem;
+  position: relative;
+  animation: 0.3s slideDown;
+  font-family: 'Audiowide', cursive;
+
+}
+
+.open__modal {
+  display: block;
+}
+
+.close__modal {
+  position: absolute;
+  color: #000;
+  top: 0px;
+  left: 10px;
+  font-size: 4rem;
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.close__modal:hover {
+  cursor: pointer;
+}
+
+.modal__body {
+  padding: 1rem;
+  text-align: center;
+  color: #6b6766;
+  line-height: 2rem;
+}
+
+.modal__body img {
+  width: 370px;
+  height: 370px;
+  filter: drop-shadow(0 0 0.3rem rgb(10, 10, 10));
+}
+
+.price {
+  font-size: 3rem;
+}
+
+/*** form styles ***/
+.form {
+  margin-top: 2rem;
+}
+
+.form__submit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background: #FF416C;
+  background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+  background: linear-gradient(to right, #FF4B2B, #FF416C);
+  font-size: 1.4rem;
+  color: #eee;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border: 0;
+  border-radius: 4px;
+  outline: 0;
+}
+.form__submit:hover {
+  cursor: pointer;
+  opacity: .8;
+  color: #1f1c18;
+}
+
 
 /* animation */
 .scale-in-ver-bottom-1 {
@@ -258,6 +363,18 @@ body {
 .slide-in-blurred-left {
   -webkit-animation: slide-in-blurred-left .4s cubic-bezier(0.23, 1, 0.32, 1) both;
   animation: slide-in-blurred-left .4s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes slideDown {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes scale-in-ver-bottom {
