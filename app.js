@@ -7,8 +7,8 @@ const navEl = document.querySelector(".nav");
 
 const homeBtnEl = document.querySelector(".menu__items").firstElementChild;
 const wheelsBtnEl = homeBtnEl.nextElementSibling;
-const monitorsBtnEl = wheelsBtnEl.nextElementSibling;
-const categoriesBtnEl = monitorsBtnEl.nextElementSibling;
+const enginesBtnEl = wheelsBtnEl.nextElementSibling;
+const categoriesBtnEl = enginesBtnEl.nextElementSibling;
 
 const modalEl_1 = document.querySelector(".modal_1");
 const modalEl_2 = document.querySelector(".modal_2");
@@ -107,6 +107,29 @@ function wheels() {
 
 }
 
+function engines() {
+  enginesBtnEl.addEventListener("click", function () {
+    contentEl.innerHTML = ` <div class="content__title">
+        <h1>Audi RS7 Engines</h1>
+      </>
+      <div class="content__details wheel__container">
+        <div class="wheels">
+          <img src="images/engine__1.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-1 e1">
+          <img src="images/engine__2.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-2 e2">
+          <img src="images/engine__3.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-3 e3">
+
+        </div>
+        <div class="wheels">
+          <img src="images/engine__4.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-4 e4">
+          <img src="images/engine__5.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-5 e5">
+          <img src="images/engine__6.png" alt="audi rs7 wheels image" class="scale-in-ver-bottom-6 e6">
+
+        </div>
+      </div>`;
+  });
+
+}
+
 const wheelsInfo = () => {
   window.addEventListener("click", function (event) {
     if (event.target.classList.contains("w1")) {
@@ -164,3 +187,4 @@ openMenu();
 home();
 wheels();
 wheelsInfo();
+engines();
