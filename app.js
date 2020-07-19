@@ -16,6 +16,12 @@ const modalEl_3 = document.querySelector(".modal_3");
 const modalEl_4 = document.querySelector(".modal_4");
 const modalEl_5 = document.querySelector(".modal_5");
 const modalEl_6 = document.querySelector(".modal_6");
+const modalEl_7 = document.querySelector(".modal_7");
+const modalEl_8 = document.querySelector(".modal_8");
+const modalEl_9 = document.querySelector(".modal_9");
+const modalEl_10 = document.querySelector(".modal_10");
+const modalEl_11 = document.querySelector(".modal_11");
+const modalEl_12 = document.querySelector(".modal_12");
 
 const closeModalTriggerEl = document.querySelectorAll(".close__modal");
 
@@ -130,7 +136,7 @@ function engines() {
 
 }
 
-const wheelsInfo = () => {
+const wheelsEnginesInfos = () => {
   window.addEventListener("click", function (event) {
     if (event.target.classList.contains("w1")) {
       modalEl_1.classList.add("open__modal");
@@ -144,7 +150,20 @@ const wheelsInfo = () => {
       modalEl_5.classList.add("open__modal");
     } else if (event.target.classList.contains("w6")) {
       modalEl_6.classList.add("open__modal");
+    } else if (event.target.classList.contains("e1")) {
+      modalEl_7.classList.add("open__modal");
+    } else if (event.target.classList.contains("e2")) {
+      modalEl_8.classList.add("open__modal");
+    } else if (event.target.classList.contains("e3")) {
+      modalEl_9.classList.add("open__modal");
+    } else if (event.target.classList.contains("e4")) {
+      modalEl_10.classList.add("open__modal");
+    } else if (event.target.classList.contains("e5")) {
+      modalEl_11.classList.add("open__modal");
+    } else if (event.target.classList.contains("e6")) {
+      modalEl_12.classList.add("open__modal");
     }
+
 
     closeModalTriggerEl[0].addEventListener("click", function (event) {
       modalEl_1.classList.remove("open__modal");
@@ -164,6 +183,24 @@ const wheelsInfo = () => {
     closeModalTriggerEl[5].addEventListener("click", function (event) {
       modalEl_6.classList.remove("open__modal");
     });
+    closeModalTriggerEl[6].addEventListener("click", function (event) {
+      modalEl_7.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[7].addEventListener("click", function (event) {
+      modalEl_8.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[8].addEventListener("click", function (event) {
+      modalEl_9.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[9].addEventListener("click", function (event) {
+      modalEl_10.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[10].addEventListener("click", function (event) {
+      modalEl_11.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[11].addEventListener("click", function (event) {
+      modalEl_12.classList.remove("open__modal");
+    });
 
     window.addEventListener("click", function (event) {
       if (event.target === modalEl_1) {
@@ -178,13 +215,27 @@ const wheelsInfo = () => {
         modalEl_5.classList.remove("open__modal");
       } else if (event.target === modalEl_6) {
         modalEl_6.classList.remove("open__modal");
+      } else if (event.target === modalEl_7) {
+        modalEl_7.classList.remove("open__modal");
+      } else if (event.target === modalEl_8) {
+        modalEl_8.classList.remove("open__modal");
+      } else if (event.target === modalEl_9) {
+        modalEl_9.classList.remove("open__modal");
+      } else if (event.target === modalEl_10) {
+        modalEl_10.classList.remove("open__modal");
+      } else if (event.target === modalEl_11) {
+        modalEl_11.classList.remove("open__modal");
+      } else if (event.target === modalEl_12) {
+        modalEl_12.classList.remove("open__modal");
       }
     });
+
+
   });
 };
 
 openMenu();
 home();
 wheels();
-wheelsInfo();
+wheelsEnginesInfos();
 engines();

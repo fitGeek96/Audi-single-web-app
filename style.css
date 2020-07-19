@@ -234,7 +234,13 @@ body {
 .modal_3,
 .modal_4,
 .modal_5,
-.modal_6 {
+.modal_6 ,
+.modal_7,
+.modal_8,
+.modal_9,
+.modal_10,
+.modal_11,
+.modal_12{
   display: none;
   position: fixed;
   z-index: 9999999;
