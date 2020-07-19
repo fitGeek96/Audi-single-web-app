@@ -36,19 +36,25 @@ body {
 .content {
   position: relative;
   text-align: center;
-  padding-top: 10rem;
+  padding-top: 8.5rem;
   transition: 0.4s all ease;
 }
 
 .content__title h1 {
   text-align: center;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.36);
 }
 
 .content__details img {
   position: relative;
   margin-top: 1rem;
   height: 400px;
-  filter: drop-shadow(0 0 0.2rem rgb(56, 55, 55)) !important;
+  filter: drop-shadow(0 0 0.5rem rgb(56, 55, 55)) !important;
+}
+
+.content__details img:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 0.5rem rgb(251, 36, 36)) !important;
 }
 
 
@@ -210,8 +216,6 @@ body {
 
 .wheel__container img:hover {
   cursor: pointer;
-  width: 210px;
-  height: 210px;
 }
 
 .wheel__container {
@@ -219,7 +223,24 @@ body {
   margin: 3rem auto;
 }
 
-.wheels {
+.gallary__container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.gallary__container img:hover {
+  cursor: pointer;
+}
+
+.gallary__container img {
+  transition: 0.4s all ease;
+  width: 305px;
+  height: 250px;
+  padding: 1rem;
+}
+
+.wheels,
+.gallary {
   text-align: center;
   display: flex;
   justify-content: space-between;
@@ -234,13 +255,19 @@ body {
 .modal_3,
 .modal_4,
 .modal_5,
-.modal_6 ,
+.modal_6,
 .modal_7,
 .modal_8,
 .modal_9,
 .modal_10,
 .modal_11,
-.modal_12{
+.modal_12,
+.modal_13,
+.modal_14,
+.modal_15,
+.modal_16,
+.modal_17,
+.modal_18 {
   display: none;
   position: fixed;
   z-index: 9999999;
@@ -264,6 +291,17 @@ body {
   animation: 0.3s slideDown;
   font-family: 'Audiowide', cursive;
 
+}
+
+.gallary__modal__content {
+  background: #242525;
+  width: 100%;
+  max-width: 1000px;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 0;
+  position: relative;
+  animation: 0.3s slideDown;
 }
 
 .open__modal {
@@ -298,6 +336,11 @@ body {
   filter: drop-shadow(0 0 0.3rem rgb(10, 10, 10));
 }
 
+.gallary__modal__body img {
+  width: 100%;
+  height: 100%;
+}
+
 .price {
   font-size: 3rem;
 }
@@ -323,12 +366,43 @@ body {
   border-radius: 4px;
   outline: 0;
 }
+
 .form__submit:hover {
   cursor: pointer;
   opacity: .8;
   color: #1f1c18;
 }
 
+.controllers {
+  position: relative;
+  display: flex;
+  bottom: 23rem;
+  justify-content: space-between;
+}
+
+.controllers__left,
+.controllers__right {
+  position: relative;
+  z-index: 9999;
+}
+
+.controllers__left {
+  left: 5rem;
+}
+
+.controllers__right {
+  right: 5rem;
+}
+
+.controllers i {
+  font-size: 3rem;
+  color: #eee;
+}
+
+.controllers i:hover {
+  cursor: pointer;
+  color: rgb(223, 7, 7);
+}
 
 /* animation */
 .scale-in-ver-bottom-1 {

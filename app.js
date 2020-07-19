@@ -8,7 +8,7 @@ const navEl = document.querySelector(".nav");
 const homeBtnEl = document.querySelector(".menu__items").firstElementChild;
 const wheelsBtnEl = homeBtnEl.nextElementSibling;
 const enginesBtnEl = wheelsBtnEl.nextElementSibling;
-const categoriesBtnEl = enginesBtnEl.nextElementSibling;
+const gallaryBtnEl = enginesBtnEl.nextElementSibling;
 
 const modalEl_1 = document.querySelector(".modal_1");
 const modalEl_2 = document.querySelector(".modal_2");
@@ -22,6 +22,12 @@ const modalEl_9 = document.querySelector(".modal_9");
 const modalEl_10 = document.querySelector(".modal_10");
 const modalEl_11 = document.querySelector(".modal_11");
 const modalEl_12 = document.querySelector(".modal_12");
+const modalEl_13 = document.querySelector(".modal_13");
+const modalEl_14 = document.querySelector(".modal_14");
+const modalEl_15 = document.querySelector(".modal_15");
+const modalEl_16 = document.querySelector(".modal_16");
+const modalEl_17 = document.querySelector(".modal_17");
+const modalEl_18 = document.querySelector(".modal_18");
 
 const closeModalTriggerEl = document.querySelectorAll(".close__modal");
 
@@ -136,7 +142,7 @@ function engines() {
 
 }
 
-const wheelsEnginesInfos = () => {
+const wheelsEnginesGallaryInfos = () => {
   window.addEventListener("click", function (event) {
     if (event.target.classList.contains("w1")) {
       modalEl_1.classList.add("open__modal");
@@ -162,6 +168,18 @@ const wheelsEnginesInfos = () => {
       modalEl_11.classList.add("open__modal");
     } else if (event.target.classList.contains("e6")) {
       modalEl_12.classList.add("open__modal");
+    } else if (event.target.classList.contains("g1")) {
+      modalEl_13.classList.add("open__modal");
+    } else if (event.target.classList.contains("g2")) {
+      modalEl_14.classList.add("open__modal");
+    } else if (event.target.classList.contains("g3")) {
+      modalEl_15.classList.add("open__modal");
+    } else if (event.target.classList.contains("g4")) {
+      modalEl_16.classList.add("open__modal");
+    } else if (event.target.classList.contains("g5")) {
+      modalEl_17.classList.add("open__modal");
+    } else if (event.target.classList.contains("g6")) {
+      modalEl_18.classList.add("open__modal");
     }
 
 
@@ -201,6 +219,24 @@ const wheelsEnginesInfos = () => {
     closeModalTriggerEl[11].addEventListener("click", function (event) {
       modalEl_12.classList.remove("open__modal");
     });
+    closeModalTriggerEl[12].addEventListener("click", function (event) {
+      modalEl_13.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[13].addEventListener("click", function (event) {
+      modalEl_14.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[14].addEventListener("click", function (event) {
+      modalEl_15.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[15].addEventListener("click", function (event) {
+      modalEl_16.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[16].addEventListener("click", function (event) {
+      modalEl_17.classList.remove("open__modal");
+    });
+    closeModalTriggerEl[17].addEventListener("click", function (event) {
+      modalEl_18.classList.remove("open__modal");
+    });
 
     window.addEventListener("click", function (event) {
       if (event.target === modalEl_1) {
@@ -227,6 +263,18 @@ const wheelsEnginesInfos = () => {
         modalEl_11.classList.remove("open__modal");
       } else if (event.target === modalEl_12) {
         modalEl_12.classList.remove("open__modal");
+      }else if (event.target === modalEl_13) {
+        modalEl_13.classList.remove("open__modal");
+      } else if (event.target === modalEl_14) {
+        modalEl_14.classList.remove("open__modal");
+      } else if (event.target === modalEl_15) {
+        modalEl_15.classList.remove("open__modal");
+      } else if (event.target === modalEl_16) {
+        modalEl_16.classList.remove("open__modal");
+      } else if (event.target === modalEl_17) {
+        modalEl_17.classList.remove("open__modal");
+      } else if (event.target === modalEl_18) {
+        modalEl_18.classList.remove("open__modal");
       }
     });
 
@@ -234,8 +282,32 @@ const wheelsEnginesInfos = () => {
   });
 };
 
+
+function gallary() {
+  gallaryBtnEl.addEventListener("click", function () {
+    contentEl.innerHTML = ` <div class="content__title">
+    <h1>Audi RS7 Gallary</h1>
+  </>
+  <div class="content__details gallary__container">
+    <div class="gallary">
+      <img src="images/gallary__1.jpg" alt="audi rs7 wheels image" class="scale-in-ver-bottom-1 g1">
+      <img src="images/gallary__2.jpg" alt="audi rs7 wheels image" class="scale-in-ver-bottom-2 g2">
+      <img src="images/gallary__3.jpg" alt="audi rs7 wheels image" class="scale-in-ver-bottom-3 g3">
+
+    </div>
+    <div class="gallary">
+      <img src="images/gallary__4.jpg" alt="audi rs7 wheels image" class="scale-in-ver-bottom-4 g4">
+      <img src="images/gallary__5.jpg" alt="audi rs7 wheels image" class="scale-in-ver-bottom-5 g5">
+      <img src="images/gallary__6.jpg" alt="audi rs7 wheels image" class="scale-in-ver-bottom-6 g6">
+
+    </div>
+  </div>`;
+  });
+}
+
 openMenu();
 home();
 wheels();
-wheelsEnginesInfos();
+wheelsEnginesGallaryInfos();
 engines();
+gallary();
