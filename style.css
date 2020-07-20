@@ -380,6 +380,14 @@ body {
   justify-content: space-between;
 }
 
+.controllers {
+  display: none;
+  z-index: 9999999999;
+}
+.controllers__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .controllers__left,
 .controllers__right {
   position: relative;
@@ -387,11 +395,11 @@ body {
 }
 
 .controllers__left {
-  left: 5rem;
+  left: 0rem;
 }
 
 .controllers__right {
-  right: 5rem;
+  right: 0rem;
 }
 
 .controllers i {
