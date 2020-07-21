@@ -30,6 +30,9 @@ const modalEl_17 = document.querySelector(".modal_17");
 const modalEl_18 = document.querySelector(".modal_18");
 
 const closeModalTriggerEl = document.querySelectorAll(".close__modal");
+const gallaryCloseModalTriggerEl = document.querySelectorAll(
+  ".close__modal__gallary"
+);
 
 let whiteColor = dotsColorEl.firstElementChild;
 let greyColor = whiteColor.nextElementSibling;
@@ -145,7 +148,7 @@ function engines() {
   });
 }
 
-function wheelsEnginesGallaryInfos(){
+function wheelsEnginesGallaryInfos() {
   window.addEventListener("click", function (event) {
     if (event.target.classList.contains("w1")) {
       modalEl_1.classList.add("open__modal");
@@ -227,7 +230,6 @@ function wheelsEnginesGallaryInfos(){
     closeModalTriggerEl[11].addEventListener("click", function (event) {
       modalEl_12.classList.remove("open__modal");
     });
-    
 
     window.addEventListener("click", function (event) {
       if (event.target === modalEl_1) {
@@ -254,28 +256,10 @@ function wheelsEnginesGallaryInfos(){
         modalEl_11.classList.remove("open__modal");
       } else if (event.target === modalEl_12) {
         modalEl_12.classList.remove("open__modal");
-      } else if (event.target === modalEl_13) {
-        controllersEl.style.display = "none";
-        modalEl_13.classList.remove("open__modal");
-      } else if (event.target === modalEl_14) {
-        controllersEl.style.display = "none";
-        modalEl_14.classList.remove("open__modal");
-      } else if (event.target === modalEl_15) {
-        controllersEl.style.display = "none";
-        modalEl_15.classList.remove("open__modal");
-      } else if (event.target === modalEl_16) {
-        controllersEl.style.display = "none";
-        modalEl_16.classList.remove("open__modal");
-      } else if (event.target === modalEl_17) {
-        controllersEl.style.display = "none";
-        modalEl_17.classList.remove("open__modal");
-      } else if (event.target === modalEl_18) {
-        controllersEl.style.display = "none";
-        modalEl_18.classList.remove("open__modal");
       }
     });
   });
-};
+}
 
 function gallary() {
   gallaryBtnEl.addEventListener("click", function () {
@@ -334,73 +318,145 @@ function carousel() {
     controllersNext(modalEl_18);
     controllersPrev(modalEl_18);
   });
-
- 
 }
 
+function closeGallaryImages() {
+  gallaryCloseModalTriggerEl[0].addEventListener("click", function (event) {
+    controllersEl.style.display = "none";
+    modalEl_13.classList.remove("open__modal");
+  });
+  gallaryCloseModalTriggerEl[1].addEventListener("click", function (event) {
+    controllersEl.style.display = "none";
+    modalEl_14.classList.remove("open__modal");
+  });
+  gallaryCloseModalTriggerEl[2].addEventListener("click", function (event) {
+    controllersEl.style.display = "none";
+    modalEl_15.classList.remove("open__modal");
+  });
+  gallaryCloseModalTriggerEl[3].addEventListener("click", function (event) {
+    controllersEl.style.display = "none";
+    modalEl_16.classList.remove("open__modal");
+  });
+  gallaryCloseModalTriggerEl[4].addEventListener("click", function (event) {
+    controllersEl.style.display = "none";
+    modalEl_17.classList.remove("open__modal");
+  });
+  gallaryCloseModalTriggerEl[5].addEventListener("click", function (event) {
+    controllersEl.style.display = "none";
+    modalEl_18.classList.remove("open__modal");
+  });
+}
 function controllersNext(modal_X) {
+  // close gallary button
+  closeGallaryImages();
+
   rightController.addEventListener("click", function () {
     if (modal_X === modalEl_13) {
-      modalEl_13.style.display = "none";
-      modalEl_14.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_14.classList.add("open__modal");
       controllersNext(modalEl_14);
     } else if (modal_X === modalEl_14) {
-      modalEl_14.style.display = "none";
-      modalEl_15.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_14.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_15.classList.add("open__modal");
       controllersNext(modalEl_15);
     } else if (modal_X === modalEl_15) {
-      modalEl_15.style.display = "none";
-      modalEl_16.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_14.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_16.classList.add("open__modal");
       controllersNext(modalEl_16);
     } else if (modal_X === modalEl_16) {
-      modalEl_16.style.display = "none";
-      modalEl_17.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_14.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_17.classList.add("open__modal");
       controllersNext(modalEl_17);
     } else if (modal_X === modalEl_17) {
-      modalEl_17.style.display = "none";
-      modalEl_18.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_14.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.add("open__modal");
       controllersNext(modalEl_18);
     } else if (modal_X === modalEl_18) {
-      modalEl_18.style.display = "none";
-      modalEl_13.style.display = "block";
+      modalEl_14.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_13.classList.add("open__modal");
       controllersNext(modalEl_13);
     }
   });
-
-  
 }
 
-
 function controllersPrev(modal_Y) {
+  closeGallaryImages();
+
   leftController.addEventListener("click", function () {
     if (modal_Y === modalEl_13) {
-      modalEl_13.style.display = "none";
-      modalEl_18.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_14.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.add("open__modal");
       controllersPrev(modalEl_18);
     } else if (modal_Y === modalEl_14) {
-      modalEl_14.style.display = "none";
-      modalEl_13.style.display = "block";
+      modalEl_14.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_13.classList.add("open__modal");
       controllersPrev(modalEl_13);
     } else if (modal_Y === modalEl_15) {
-      modalEl_15.style.display = "none";
-      modalEl_14.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_14.classList.add("open__modal");
       controllersPrev(modalEl_14);
     } else if (modal_Y === modalEl_16) {
-      modalEl_16.style.display = "none";
-      modalEl_15.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_14.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_15.classList.add("open__modal");
       controllersPrev(modalEl_15);
     } else if (modal_Y === modalEl_17) {
-      modalEl_17.style.display = "none";
-      modalEl_16.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_14.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_17.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_16.classList.add("open__modal");
       controllersPrev(modalEl_16);
     } else if (modal_Y === modalEl_18) {
-      modalEl_18.style.display = "none";
-      modalEl_17.style.display = "block";
+      modalEl_13.classList.remove("open__modal");
+      modalEl_14.classList.remove("open__modal");
+      modalEl_15.classList.remove("open__modal");
+      modalEl_16.classList.remove("open__modal");
+      modalEl_18.classList.remove("open__modal");
+      modalEl_17.classList.add("open__modal");
       controllersPrev(modalEl_17);
     }
   });
-
-  
 }
 openMenu();
 home();
